@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-namespace App\Vm\Memory;
+namespace Vm\Memory;
 
 use OutOfBoundsException;
 use RuntimeException;
 use Vm\EventDispatcher;
-use Vm\Memory\Segment;
 
 final class Memory
 {

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace Vm\Instruction;
 
 use Vm\Memory\Memory;

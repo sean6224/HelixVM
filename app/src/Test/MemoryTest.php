@@ -1,7 +1,7 @@
 <?php
 namespace App\Test;
 
-use App\Vm\Memory\Memory;
+use Vm\Memory\Memory;
 use Vm\Memory\Segment;
 
 class MemoryTest
@@ -20,6 +20,7 @@ class MemoryTest
         $memory->on('write', function(int $address, $value) {
             echo "[Event] Write to 0x" . dechex($address) . ": $value\n";
         });
+
 
         $memory->store(10, 42);
         echo $memory->load(10) . PHP_EOL;

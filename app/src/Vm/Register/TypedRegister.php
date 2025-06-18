@@ -11,15 +11,12 @@ use Vm\Register\Type\RegisterValue;
  * Implement RegisterInterface by delegating get/set operations
  * to the underlying RegisterValue object.
  */
-final class TypedRegister implements RegisterInterface
+final readonly class TypedRegister implements RegisterInterface
 {
-    private string $name;
-    private RegisterValue $value;
-
-    public function __construct(string $name, RegisterValue $value)
-    {
-        $this->name = $name;
-        $this->value = $value;
+    public function __construct(
+        private string $name,
+        private RegisterValue $value
+    ){
     }
 
     public function getName(): string
